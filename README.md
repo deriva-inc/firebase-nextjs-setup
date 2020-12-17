@@ -1,6 +1,36 @@
-The web app for the [Goalskeeper](https://goalskeeper.app) platform.
+This repo is a template for setting up your web app using [NextJS](https://nextjs.org) using [Firebase Hosting](https://firebase.google.com/products/hosting) and [Firebase Cloud Functions](https://firebase.google.com/products/functions).
 
-For change log, please see [CHANGELOG.md](https://github.com/deriva-inc/GoalsKeeper-Web/blob/development/CHANGELOG.md).
+For change log, please see [CHANGELOG.md](https://github.com/deriva-inc/firebase-nextjs-setup/blob/master/CHANGELOG.md).
+
+## Set-up
+- Clone the repository on your system.
+```
+git clone https://github.com/deriva-inc/firebase-nextjs-setup.git
+```
+- Install `node` and `npm`/`yarn` if you haven't.
+- Go to root directory i.e. `firebase-nextjs-setup`
+- Open `.firebaserc` file and change the `your-firebase-project-id` to your actual firebase project ID.
+- Go to `functions` folder.
+```
+cd src/functions
+```
+- Install dependencies.
+```
+npm install
+```
+- Go to root directory.
+```
+cd ../..
+```
+- Run `install` script.
+```
+npm run install
+```
+- If the script run was successful, you will see a `next` folder generated inside `functions` folder.
+- Install `firebase tools` if you haven't.
+- Now to test your app locally run `firebase emulators:start` in your root.
+- Open a new terminal @ `firebase-nextjs-setup` and run `cd src/app && npm run serve`.
+- Your web app should be live on `localhost:3000` and your Firebase Emulators should be live on `localhost:400`.
 
 ## LICENSE
 
